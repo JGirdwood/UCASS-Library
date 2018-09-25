@@ -85,7 +85,7 @@ void UCASS::printINFOstr(Stream &out){
 }
 
 void UCASS::printConfig(Stream &out, char del){
-  for (byte i=0; i<=14; i++){
+  for (byte i=0; i<=15; i++){
     out.print(bytetoint16(SPIin[2*i],SPIin[2*i+1]));
     out.print(del);
   }
@@ -96,7 +96,7 @@ void UCASS::printConfig(Stream &out, char del){
 
 void UCASS::printHist(Stream &out, char del){
   uint8_t index = 0;
-  for (byte i=0; i<=14; i++){
+  for (byte i=0; i<=15; i++){
     out.print(bytetoint16(SPIin[2*index],SPIin[2*index+1]));
     out.print(del);
     index++;
