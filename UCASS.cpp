@@ -107,8 +107,10 @@ void UCASS::printHist(Stream &out, char del){
     index++;
   }
   out.print(bytetoint16(SPIin[36],SPIin[37]));
+  index = index + 2;
   out.print(del);
   out.print(bytetoint16(SPIin[38],SPIin[39]));
+  index = index + 2;
   out.print(del);
   for (byte i=0; i<=1; i++){
     out.print(SPIin[index]);
